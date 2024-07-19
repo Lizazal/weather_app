@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Search History</title>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Search History</h1>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>City</th>
+                    <th>Search Count</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for element in search_history %}
+                <tr>
+                    <td>{{ element.city }}</td>
+                    <td>{{ element.count }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <a href="/" class="btn btn-primary">Back</a>
+    </div>
+</body>
+</html>
